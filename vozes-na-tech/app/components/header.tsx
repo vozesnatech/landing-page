@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
+
 // Componente de Cabeçalho
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,7 +19,7 @@ export default function Header() {
   return (
     <header className="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <a href="#" className="flex items-center gap-2">
+        <a href="/home" className="flex items-center gap-2">
           <Image
             src="/img/logo1.png"
             alt="Vozes na Tech Logo"
@@ -47,7 +48,7 @@ export default function Header() {
         </nav>
         <div className="hidden md:flex items-center gap-4">
           <a
-            href="#"
+            href="/login"
             className=" text-purple-900 font-semibold hover:underline"
           >
             Login
@@ -85,7 +86,7 @@ export default function Header() {
             ))}
             <hr />
             <a
-              href="#"
+              href="/login"
               className=" text-purple-900 font-semibold py-2"
               onClick={closeMenu}
             >
@@ -95,7 +96,7 @@ export default function Header() {
               href="https://docs.google.com/forms/d/e/1FAIpQLSfOqBjxTorLz0x0jtC_sUSk1C4HPLf9CweJFnRk7aJZMJQ3rA/viewform"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-600 text-white text-center px-5 py-2 rounded-full font-semibold hover:bg-blue-700"
+              className="bg-purple-600 text-white text-center px-5 py-2 rounded-full font-semibold hover:bg-purple-700"
               onClick={closeMenu}
             >
               Cadastre-se
